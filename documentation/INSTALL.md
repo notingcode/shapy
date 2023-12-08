@@ -4,8 +4,9 @@
 
 The code has been tested with Python 3.8, CUDA 10.2 and PyTorch 1.7.1 on Ubuntu 18.04.
 
-- Clone this repo, create virtual environment & install requirements
-    ```
+- ~~Clone this repo, create virtual environment & install requirements~~ **Easier setup below**
+
+    ```bash
     git clone git@github.com:muelea/shapy.git
     cd shapy
     export PYTHONPATH=$PYTHONPATH:$(pwd)/attributes/
@@ -23,11 +24,24 @@ The code has been tested with Python 3.8, CUDA 10.2 and PyTorch 1.7.1 on Ubuntu 
     python setup.py install
     ```
 
+- Edit
+
+    ```bash
+    git clone https://github.com/notingcode/shapy.git
+    cd shapy
+    
+    export PYTHONPATH=$PYTHONPATH:$(pwd)/attributes/:$(pwd)/mesh-mesh-intersection/
+    export CUDA_SAMPLES_INC=$(pwd)/mesh-mesh-intersection/include
+
+    conda env create -f environment.yml
+    ```
+
 ### Body model and model data
 
 #### Folder structure
 
 In `shapy/data`, you will need subfolders for the neutral SMPL-X body model (body_models) and ExPose and SHAPY models and utilities (expose_release, trained_models, utility_files). The final data structure should look like this:
+
 ```bash
 data
 ├── body_models
@@ -59,6 +73,7 @@ data
 #### ExPose and SHAPY utilities
 
 ##### Option 1 (chose if you have not yet registered on the SHAPY website)
+
 Download `shapy_data.zip` from our [website](https://shapy.is.tue.mpg.de) and extract it in the data folder:
 
 ```bash
@@ -67,6 +82,7 @@ unzip shapy_data.zip
 ```
 
 ##### Option 2 (chose if you have already registered on the SHAPY website)
+
 Run `download_data.sh`. This will request your username and password for the SHAPY website and then download and extract the SHAPY model data.
 
 ```bash
