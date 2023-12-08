@@ -6,7 +6,6 @@ out/
 attributes/scripts/
 regressor/data
 /datasets/
-samples/shapy_fit/
 data_old/
 data/**
 hparams.yaml
