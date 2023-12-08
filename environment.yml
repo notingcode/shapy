@@ -1,0 +1,44 @@
+name: shapy
+
+channels:
+  - pytorch
+  - defaults
+  - nvidia
+  - conda-forge
+
+dependencies:
+  - python=3.8
+  - pytorch=*=*cuda11.6*
+  - torchvision=*=*cu116*
+  - cudatoolkit=11.6
+  - cuda-nvcc=11.6
+  - cuda-profiler-api=11.8
+  - cuda-runtime=11.6
+  - cuda-python=11.6
+  - pytorch-lightning
+  - torchmetrics
+  - cxx-compiler=1.3.0
+  - imageio
+  - joblib
+  - kornia
+  - loguru
+  - matplotlib
+  - ninja
+  - numpy<1.24
+  - omegaconf=2.0.*
+  - pillow
+  - pip
+  - pyopengl
+  - pyrender
+  - pyyaml
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - shapely
+  - tqdm
+  - trimesh
+  - yacs
+  - pip:
+      - -r requirements.txt
+      - ./attributes
+      - ./mesh-mesh-intersection
