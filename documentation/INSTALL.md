@@ -2,7 +2,7 @@
 
 ### Code
 
-The code has been tested with Python 3.8, CUDA 10.2 and PyTorch 1.7.1 on Ubuntu 18.04.
+The code has been tested with Python 3.8, CUDA ~~10.2~~ 11.6 and PyTorch ~~1.7.1~~ 1.13.1 on Ubuntu ~~18.04~~ 22.04.
 
 - ~~Clone this repo, create virtual environment & install requirements~~ **Easier setup below**
 
@@ -24,14 +24,16 @@ The code has been tested with Python 3.8, CUDA 10.2 and PyTorch 1.7.1 on Ubuntu 
     python setup.py install
     ```
 
-- Edit
+- **Edit**
 
     ```bash
     git clone https://github.com/notingcode/shapy.git
     cd shapy
     
+    #------Make sure these variables are defined in your current shell------
     export PYTHONPATH=$PYTHONPATH:$(pwd)/attributes/:$(pwd)/mesh-mesh-intersection/
     export CUDA_SAMPLES_INC=$(pwd)/mesh-mesh-intersection/include
+    #-----------------------------------------------------------------------
 
     conda env create -f environment.yml
     ```
