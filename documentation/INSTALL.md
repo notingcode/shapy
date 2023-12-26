@@ -28,6 +28,8 @@ The code has been tested with Python 3.8, CUDA ~~10.2~~ 11.6 and PyTorch ~~1.7.1
 
 - **Edit**
 
+    Setup conda environment using instructions below.
+
     ```bash
     git clone https://github.com/notingcode/shapy.git
     cd shapy
@@ -75,7 +77,7 @@ data
 
 #### ExPose and SHAPY utilities
 
-##### Option 1 (chose if you have not yet registered on the SHAPY website)
+##### Option 1 (follow this instruction if you are not yet registered on the SHAPY website)
 
 Download `shapy_data.zip` from our [website](https://shapy.is.tue.mpg.de) and extract it in the data folder:
 
@@ -84,7 +86,7 @@ cd data
 unzip shapy_data.zip
 ```
 
-##### Option 2 (chose if you have already registered on the SHAPY website)
+##### Option 2 (follow this instruction if you are already registered on the SHAPY website)
 
 Run `download_data.sh`. This will request your username and password for the SHAPY website and then download and extract the SHAPY model data.
 
